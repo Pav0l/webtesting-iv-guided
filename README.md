@@ -41,3 +41,9 @@ Test script in `package.json` the `cross-env` is a library that allows you to in
     "test": "cross-env DB_ENV=testing jest --watch --verbose"
   },
 ```
+
+In case you delete your testing DB, you can get it back with `knex migrate:latest` command, but you need to flag it as `testing` env variable, so the migration knows which DB you want to migrate to. Without the env variable, it would migrate only to 'development' database.
+
+```
+npx knex migrate:latest --env=testing
+```
