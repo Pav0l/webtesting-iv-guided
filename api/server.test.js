@@ -51,5 +51,14 @@ describe('Server', () => {
       const hobbitsArray = await request(server).get('/hobbits');
       expect(hobbitsArray.body).toHaveLength(0);
     });
+
+    // testing with .then()
+    it('responses with proper status code with .then(', () => {
+      return request(server)
+        .get('/hobbits')
+        .then(res => {
+          expect(200);
+        });
+    });
   });
 });
