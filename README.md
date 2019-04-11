@@ -10,3 +10,7 @@ Guided project for **Web Testing IV** Module.
 - [ ] type `yarn server` or `npm run server` to start the API.
 
 Please follow along as the instructor add automated tests to the API.
+
+# Lecture notes
+
+Before starting the tests, we need to specify a NodeJS environment for Jest. So Jest doesn't use window object.
